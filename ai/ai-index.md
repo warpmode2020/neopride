@@ -5,6 +5,11 @@
 ### Plan
 - structure.md
 
+### AI 
+- ai/ai-index.md
+- ai/glossary.md
+- ai/quick-summary.md
+
 ### Temporal Physics Lore
 - corelore/01_time.md
 - corelore/ark.md
