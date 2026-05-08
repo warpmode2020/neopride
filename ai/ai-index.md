@@ -46,7 +46,7 @@
 - neopride/profiles/501_Alex_3.md
 - neopride/profiles/501_Alex_4.md
 - neopride/profiles/501_Alex_5.md
-- neopride/profiles/501_Alex_5.md
+- neopride/profiles/501_Alex_6.md
 
 
 
