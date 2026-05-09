@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Neo-Pride Test</title>
+
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      background:#111;
+      color:#ddd;
+      margin:40px;
+      line-height:1.6;
+    }
+
+    #content{
+      white-space: pre-wrap;
+      max-width: 1000px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Neo-Pride Knowledge Base</h1>
+
+<div id="content">
+Loading README.md ...
+</div>
+
+<script>
+fetch('README.md')
+  .then(response => response.text())
+  .then(text => {
+    document.getElementById('content').textContent = text;
+  })
+  .catch(error => {
+    document.getElementById('content').textContent =
+      'Error loading README.md\n\n' + error;
+  });
+</script>
+
+</body>
+</html>
