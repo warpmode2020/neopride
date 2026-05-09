@@ -7,21 +7,32 @@
   <style>
     body{
       font-family: Arial, sans-serif;
-      background:#111;
-      color:#ddd;
+      background:#ddd;
+      color:#111;
       margin:40px;
       line-height:1.6;
     }
 
     #content{
-      white-space: pre-wrap;
-      max-width: 1000px;
+							
+      max-width:1000px;
+    }
+
+    a{
+      color:#6cf;
+    }
+
+    h1,h2,h3{
+      color:#fff;
     }
   </style>
+
+  <!-- Markdown parser -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
 
-<h1>Neo-Pride Knowledge Base</h1>
+								 
 
 <div id="content">
 Loading README.md ...
@@ -31,11 +42,15 @@ Loading README.md ...
 fetch('README.md')
   .then(response => response.text())
   .then(text => {
-    document.getElementById('content').textContent = text;
+
+    // convert markdown -> html
+    const html = marked.parse(text);
+
+    document.getElementById('content').innerHTML = html;
   })
   .catch(error => {
-    document.getElementById('content').textContent =
-      'Error loading README.md\n\n' + error;
+    document.getElementById('content').innerHTML =
+      '<pre>Error loading README.md\n\n' + error + '</pre>';
   });
 </script>
 
